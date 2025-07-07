@@ -1,0 +1,176 @@
+**Variables in Python are containers used to store data in memory. Unlike statically typed languages, Python is a dynamically typed language, meaning you don’t need to declare the type of a variable explicitly. A variable is created the moment a value is assigned to it.
+
+Creating and Using Variables
+Here is a simple example of creating variables and printing their values:
+age = 38
+name = "Ankit"
+weight = 58.5
+​
+print(age)      # Output: 38
+print(name)     # Output: Ankit
+print(weight)   # Output: 58.5
+In this program:
+
+age stores an integer value (38).
+name stores a string value ("Ankit").
+weight stores a floating-point value (58.5).
+
+
+ ** Swap Two Variables in Python
+Swapping variables is a common programming task where the values of two variables are exchanged. Python provides multiple methods to achieve this, ranging from basic approaches using temporary variables to more Pythonic solutions.
+ex.=
+x = 100
+y = 200
+# Pythonic swapping
+x, y = y, x
+  print(x)  # output x=200
+
+  **id() function
+  Understanding the Function in Python
+The id() function in Python is a built-in function that provides a unique identifier for every object. This identifier helps in understanding how objects are stored and referenced in memory.
+
+Basic Example of id()
+  Consider the following example to understand the id() function
+  a=5
+  print(id(a))# output 123456789012345
+
+
+
+  **type() function
+  
+The type() function in Python is a built-in function used to determine the data type of a variable or value. Unlike other programming languages, Python does not require explicit declaration of variable data types; instead, it assigns data types automatically based on the assigned values. This article explores the functionality of the type() function with examples.
+a = 10
+print(type(a))	# Output: <class 'int'>
+
+  **Lists in Python
+
+  Lists in Python are one of the most versatile and commonly used data structures. They allow you to store collections of items in an ordered and mutable format. This makes lists ideal for various applications, from simple scripts to complex data manipulation tasks. This article provides an introduction to Python lists, demonstrating how to create and manipulate them using basic and advanced functions.
+  
+a = [10, 20, 30, 40, 50]
+
+print(a)	  # Output: [10, 20, 30, 40, 50]
+print(a[3])   # Output: 40
+print(a[-1])  # Output: 50
+print(a[-2])  # Output: 40
+
+a.append(60)
+print(a)		# Output: [10, 20, 30, 40, 50, 60]
+a.insert(1, 15)
+print(a)		# Output: [10, 15, 20, 30, 40, 50, 60]
+
+print(a.count(30))		# Output: 1
+print(a.index(30))		# Output: 3
+a.remove(20)
+print(a)	# Output: [10, 15, 30, 40, 50, 60]
+
+
+print(a.pop()) 		# Output: 60
+print(a.pop(2)) 	# Output: 30
+print(a)			# Output: [10, 15, 40, 50]
+
+del a[1]
+print(a)	# Output: [10, 40, 50]
+
+b = [10, 20, 30, 40, 50]
+print(max(b))  # Output: 50
+print(min(b))  # Output: 10
+print(sum(b))  # Output: 150
+
+b.reverse()
+print(b)	# Output: [50, 40, 30, 20, 10]
+
+b.sort()
+print(b)	# Output: [10, 20, 30, 40, 50]
+
+***Tuples in Python
+Tuples in Python are similar to lists in that they are both ordered and indexed collections of items. However, there are key differences that make tuples unique and useful in certain situations. This article will introduce you to tuples, explain their properties, and show you how to use them effectively.
+
+What is a Tuple?
+A tuple is a collection of items that are ordered and unchangeable. Tuples are defined by enclosing the items in parentheses (). Each item in the tuple is separated by a comma.
+Immutable: Unlike lists, tuples cannot be changed after they are created. You cannot add, remove, or modify items in a tuple.
+    # With parentheses
+a = (10, 20, 'geek')
+
+# Without parentheses
+a = 10, 20, 'geek'
+
+# Single-item tuple
+b = (10,)
+
+print(a[1])    # Output: 20
+print(a[-1])   # Output: geek
+
+****Sets in Python
+In Python, a set is a collection of items, similar to a list. Like lists, sets can contain items of the same type, such as all integers, or a mix of different types, like integers and strings.
+Distinct Items: A set only contains unique items. This means no two items in a set can be the same. For example, if you have a set s = {10, 20, 30} and try to add 20 again, the set remains unchanged.
+Unordered: Sets do not maintain any particular order of items. If you add items in a specific order and then print the set, the items may appear in any order.
+No Indexing: Unlike lists, sets do not support indexing. You cannot access items by their position in the set.
+advantages:
+Fast Operations: Operations like union, intersection, and difference are performed quickly on sets.
+Hashing: Internally, sets use hashing, which allows for fast search, insert, and delete operations.
+Creating Sets in Python
+You can create a set using curly braces {} or the set() constructor.
+
+  s = {10, 20}
+s.add(30)
+print(s)  		# Output: {10, 20, 30}
+
+s.add(30)
+print(s)  		# Output: {10, 20, 30}
+
+s.update([40, 50])
+print(s)  		# Output: {40, 10, 50, 20, 30}
+
+  s = {10, 30, 20, 40}
+s.discard(30)
+print(s)  		# Output: {10, 20, 40}
+
+s.remove(20)
+print(s)  		# Output: {40, 10}
+
+s.clear()
+print(s)  		# Output: set()
+
+s.add(50)
+del s
+
+
+
+
+  s1 = {2, 4, 6, 8}
+s2 = {3, 6, 9}
+
+print(s1 | s2)          # Output: {2, 3, 4, 6, 8, 9}
+print(s1 & s2)          # Output: {6}
+print(s1 - s2)          # Output: {2, 4, 8}
+print(s1 ^ s2)          # Output: {2, 3, 4, 8, 9}
+  - Union (|): Combines all unique elements from both sets.
+
+- Intersection (&): Returns only the common elements between the sets.
+
+- Difference (-): Returns elements present in the first set but not in the second.
+
+- Symmetric Difference (^): Returns elements present in either set but not in both.
+
+
+  s1 = {2, 4, 6, 8}
+s2 = {4, 8}
+
+print(s1.isdisjoint(s2))  # Output: False
+print(s1 <= s2)           # Output: False
+print(s1 < s2)            # Output: False
+print(s1 >= s2)           # Output: True
+print(s1 > s2)            # Output: True
+
+  - isdisjoint(): Returns True if the two sets have no elements in common.
+
+- Subset (<=): Checks if all elements of the first set are in the second set.
+
+- Proper Subset (<): Similar to subset but does not allow both sets to be equal.
+
+- Superset (>=): Checks if the first set contains all elements of the second set.
+
+- Proper Superset (>): Similar to superset but does not allow both sets to be equal.
+These operations can also be performed using methods like union(), intersection(), and difference()
+# After del s, accessing s will raise an error
+  
